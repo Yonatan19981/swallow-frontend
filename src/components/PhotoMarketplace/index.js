@@ -124,8 +124,7 @@ export default class PhotoMarketplace extends Component {
         }
 
         try {
-          const isProd = process.env.NODE_ENV === 'production';
-          if (!isProd) {
+
             // Get network provider and web3 instance.
             const web3 = await getWeb3();
             let ganacheAccounts = [];
@@ -202,7 +201,7 @@ export default class PhotoMarketplace extends Component {
             ///@dev - NFT（Always load listed NFT data
             const allPhotos = await this.getAllPhotos();
             this.setState({ allPhotos: allPhotos })
-          }
+          
         } catch (error) {
           // Catch any errors for any of the above operations.
           alert(

@@ -158,8 +158,7 @@ export default class Publish extends Component {
         }
 
         try {
-          const isProd = process.env.NODE_ENV === 'production';
-          if (!isProd) {
+        
             // Get network provider and web3 instance.
             const web3 = await getWeb3();
             let ganacheAccounts = [];
@@ -233,7 +232,7 @@ export default class Publish extends Component {
             else {
               this.setState({ web3, ganacheAccounts, accounts, balance, networkId, networkType, hotLoaderDisabled, isMetaMask });
             }
-          }
+          
         } catch (error) {
           // Catch any errors for any of the above operations.
           alert(
@@ -260,6 +259,7 @@ export default class Publish extends Component {
             <div className={styles.left}>
                 <Grid container style={{ marginTop: 20 }}>
                     <Grid item xs={10}>
+                      
                         <Card width={"420px"} 
                               maxWidth={"420px"} 
                               mx={"auto"} 
