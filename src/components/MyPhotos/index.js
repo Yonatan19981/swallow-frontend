@@ -235,7 +235,7 @@ export default class MyPhotos extends Component {
 
         return (
             <div className={styles.contracts}>
-              <h2>My Photos</h2>
+              <h2>My Tattoos</h2>
 
               { allPhotos.map((photo, key) => {
                 return (

@@ -268,14 +268,14 @@ export default class Publish extends Component {
                               borderColor={"#E8E8E8"}
                         >
                             <h2>Publish and Put on Sale</h2>
-                            <p>Please upload your photo and put on sale from here!</p>
+                            <p>Please upload your Tattoo and put it on sale from here!</p>
 
                             <Form onSubmit={this.onSubmit}>
-                                <Field label="Photo NFT Name">
+                                <Field label="Name you tattoo">
                                     <Input
                                         type="text"
                                         width={1}
-                                        placeholder="e.g) Art NFT Token"
+                                        placeholder="Please write the name of your tattoo"
                                         required={true}
                                         value={this.state.valueNFTName} 
                                         onChange={this.handleNFTName} 
@@ -295,18 +295,18 @@ export default class Publish extends Component {
                                 </Field>
                                 */}
 
-                                <Field label="Photo Price (unit: ETH)">
+                                <Field label="The price in ETH in which you want to sell your tattoo rights">
                                     <Input
                                         type="text"
                                         width={1}
-                                        placeholder="e.g) 10"
+                                        placeholder="e.g 10"
                                         required={true}
                                         value={this.state.valuePhotoPrice} 
                                         onChange={this.handlePhotoPrice}                                        
                                     />
                                 </Field>
 
-                                <Field label="Photo for uploading to IPFS">
+                                <Field label="Tattoo file to upload">
                                     <input 
                                         type='file' 
                                         onChange={this.captureFile} 
@@ -314,7 +314,7 @@ export default class Publish extends Component {
                                     />
                                 </Field>
 
-                                <Button size={'medium'} width={1} type='submit'>Upload my photo and put on sale</Button>
+                                <Button size={'medium'} width={1} type='submit'>Upload my tattoo and put it on sale</Button>
                             </Form>
                         </Card>
                     </Grid>
