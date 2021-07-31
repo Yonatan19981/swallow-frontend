@@ -90,7 +90,7 @@ export default class Publish extends Component {
           console.log('=== ipfsHash ===', this.state.ipfsHash);
 
           const nftName = valueNFTName;
-          const nftSymbol = "NFT-MARKETPLACE";  /// [Note]: All NFT's symbol are common symbol
+          const nftSymbol = "SWALLOW";  /// [Note]: All NFT's symbol are common symbol
           //const nftSymbol = valueNFTSymbol;
           const _photoPrice = valuePhotoPrice;
           console.log('=== nftName ===', nftName);
