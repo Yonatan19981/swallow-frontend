@@ -1,25 +1,25 @@
 {
   "contractName": "PhotoNFTDataObjects",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol\":\"PhotoNFTDataObjects\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/PhotoNFT.sol\":{\"keccak256\":\"0x38a5ac7b82e0484c1ee31f52d31e495573b202d4db4ac519fe8472e25892596f\",\"urls\":[\"bzz-raw://e7bed2c3e379deec1aeb70e05ca7c702b2136c9608050d6cf4184294437dd613\",\"dweb:/ipfs/QmNqHM2HvAtPydWBZK5mg2GLHq7MzBZRP3Sdn8bANJ7CLE\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x9da23588f58d0fa67097984e151bdaa6aa69c5e192bae17b44a90b0cfc194736\",\"urls\":[\"bzz-raw://5e88c7dbb4d1e6d3f133112b9994491b8531f5d9103cf41becd1c267d2cd67af\",\"dweb:/ipfs/QmNuSmDBgv616hXRshbHx48ufdZoSrcFHpwqP4iPg2ac4X\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xbbb6159006ae3639daea09f7d63987816d6cf3a99f52af919363e025d3abf3b8\",\"urls\":[\"bzz-raw://35e7d742ee71461779df12a0ab1ad4701144d98eb6401182838c8daf40b008dd\",\"dweb:/ipfs/QmY4t7pxcX2cfk6VsGJWZLBgoKMpRctY8X1HPxykLjptSi\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x965012d27b4262d7a41f5028cbb30c51ebd9ecd4be8fb30380aaa7a3c64fbc8b\",\"urls\":[\"bzz-raw://1eb493553b27efd46c231a836a83ce50d215639feb97b4aac9f301d0fd034ff5\",\"dweb:/ipfs/QmbMdvSXcqGKxeeYvzF3VrWpoHQyVzMXBhzhAokF2Gdymv\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x0546fa662082b36ac9cbd418c0722a3c52718b9dc3fe3e284081d73f48036228\",\"urls\":[\"bzz-raw://a50dd4c1c7afa4ade53ee47bc782eaad72a45091ed9756081616b33eb6c150c4\",\"dweb:/ipfs/Qmb88e4EnSbJv2BbayFg6wZpFMJ9aPF7r4cwMjnZkUu4VK\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol\":{\"keccak256\":\"0x6c1899ddf6ca192150b58ce0ad2a890d981282a3ec2620700fa1c9a381b79ba0\",\"urls\":[\"bzz-raw://d898fb28a61ef52f03fcc3be772b09aeb4c88ebe6e57b79d7275da94758d6afa\",\"dweb:/ipfs/QmRFuDxB532sYwB8JXq5LdHLAfGigcAHMvh4T4TBVrHPwK\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol\":{\"keccak256\":\"0x21b8368e133ed2ee80f5feb602ff6bad7e3b9110b1ae90ea0faabf9c00527224\",\"urls\":[\"bzz-raw://ac1f35c6b92a163e16498daa3d471bfd218fad71f8067ae357950ddd31add718\",\"dweb:/ipfs/QmPk2WQbNXPW1jnnpDZXVxhgXATBU6fGwYFejWi21oL94M\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol\":{\"keccak256\":\"0xb8deb41bb234969070dc362c144191f2781178c33cf6b434fd68aa3692834105\",\"urls\":[\"bzz-raw://83ef717ae1d047085d6ce2d63ed987c3282ba22190c09fa75f52346af2ac67bb\",\"dweb:/ipfs/QmQqQJor8zVE9kvYiCZscmerKrdLGgiELrn199zQEm7kZp\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x1f059ee943273719130df645fa38069b792988e8b732585528d5b1265f5aa046\",\"urls\":[\"bzz-raw://31e4d99091a83a42a6ea14d74ceae2ec3ffb2905c7ee07358875af72ea188333\",\"dweb:/ipfs/Qmf7nHc6BwhbyawapCVRZHzhBHNoA8ftpQWmGSyToVKVzN\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x1cded69b7f4e17fe634fecbf2bf43320beb11a95ba924c3665a11fc8f47dffc4\",\"urls\":[\"bzz-raw://013a7b38cce9bf8d10af9ec8b5e09be1ea6645da2e1958bf6ed8a875942ac6d6\",\"dweb:/ipfs/Qme9TC1YrXMpNHFoM8GHRjWtRWJ1LxRcYJCPSfoqY4yYri\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xa0bb72e035727b0631aac6380e899ad48511073a3d67f1da528f845d4a3121fb\",\"urls\":[\"bzz-raw://aa3f398156da37e868c7d22967457a70aa840097c7d532b0155208a0d2dbf63f\",\"dweb:/ipfs/QmUfBdHdyzY5FzhZPC46RDsqJfaqT9oLhsknP92pYqtM2g\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x5e7281dbd14cf07af0974ce830c6242062cd430b70658878d49b5f5c1e2ec0aa\",\"urls\":[\"bzz-raw://3c9374b456bf5fde2c473331ff75bed9c6be3634948ba6a6507e4c19c2abf605\",\"dweb:/ipfs/QmUm5NKd1ToSr8MHVVanQv3XEkQpmYKw2441KXYyXPE6np\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0x5c731061b804fa256fc8c05150eafe5d20b6bb94541a8f187912bf84f7033f34\",\"urls\":[\"bzz-raw://a3c2d9f046beebab7fb41b1b124a6a124a36f510f7c67365861402ac831bdc71\",\"dweb:/ipfs/QmUtASRgitregbKH83anopLtF9vFQe3BKeAjhUa6F7t9YV\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol\":{\"keccak256\":\"0x7fa62d2076e8f173cf623c06893b70677dcdcdec49c42fb6499506ec8612194c\",\"urls\":[\"bzz-raw://089cb392790a42ae5fcc4a805417afbea49b7e2e737770bb661b121f5fc9eb47\",\"dweb:/ipfs/QmfZeNU6MacUjU3j4EtsGqdN3Fe1wbjDPwTuo7zezHii4i\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820d99048907b927cda42c7a9482df75bfd9dfa833be90cf2f0dfa29ff23088398564736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820d99048907b927cda42c7a9482df75bfd9dfa833be90cf2f0dfa29ff23088398564736f6c63430005100032",
-  "sourceMap": "74:338:55:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:338:55;;;;;;;",
-  "deployedSourceMap": "74:338:55:-;;;;;",
-  "source": "pragma solidity ^0.5.0;\n\nimport { PhotoNFT } from \"../../PhotoNFT.sol\";\n\n\ncontract PhotoNFTDataObjects {\n\n    struct Photo {  /// [Key]: index of array\n        PhotoNFT photoNFT;\n        string photoNFTName;\n        string photoNFTSymbol;\n        address ownerAddress;\n        uint photoPrice;\n        string ipfsHashOfPhoto;\n        string status;  /// \"Open\" or \"Cancelled\"\n        uint256 reputation;\n    }\n\n}\n",
-  "sourcePath": "/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol\":\"PhotoNFTDataObjects\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/PhotoNFT.sol\":{\"keccak256\":\"0x6b84e0814a077dae711e86534fea9f9ef759f04ad531a283d1f6dabc9849399c\",\"urls\":[\"bzz-raw://54d95a2edb025ad75b39e1e21e67820bfbdeca0b9f7ea0a686f7ac324ba38466\",\"dweb:/ipfs/QmYSPkr3fpJdrZQRr1cn7rB3funBuWESQPzyeCEoh6vSNA\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0x9da23588f58d0fa67097984e151bdaa6aa69c5e192bae17b44a90b0cfc194736\",\"urls\":[\"bzz-raw://5e88c7dbb4d1e6d3f133112b9994491b8531f5d9103cf41becd1c267d2cd67af\",\"dweb:/ipfs/QmNuSmDBgv616hXRshbHx48ufdZoSrcFHpwqP4iPg2ac4X\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xbbb6159006ae3639daea09f7d63987816d6cf3a99f52af919363e025d3abf3b8\",\"urls\":[\"bzz-raw://35e7d742ee71461779df12a0ab1ad4701144d98eb6401182838c8daf40b008dd\",\"dweb:/ipfs/QmY4t7pxcX2cfk6VsGJWZLBgoKMpRctY8X1HPxykLjptSi\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x965012d27b4262d7a41f5028cbb30c51ebd9ecd4be8fb30380aaa7a3c64fbc8b\",\"urls\":[\"bzz-raw://1eb493553b27efd46c231a836a83ce50d215639feb97b4aac9f301d0fd034ff5\",\"dweb:/ipfs/QmbMdvSXcqGKxeeYvzF3VrWpoHQyVzMXBhzhAokF2Gdymv\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x0ca8ea2df3f83ab9bfb4c7a1066c14822f25c9a8b3ec339be490eaf46d87430d\",\"urls\":[\"bzz-raw://a76aafb099fca11951ba63c9ba5ed2e49942575af7372ee7558a50bd1ac9ee61\",\"dweb:/ipfs/QmUQKX3TDxNF4FBtj9Agm5x7EAFrpkdgEobDkk958CZoBH\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol\":{\"keccak256\":\"0x6c1899ddf6ca192150b58ce0ad2a890d981282a3ec2620700fa1c9a381b79ba0\",\"urls\":[\"bzz-raw://d898fb28a61ef52f03fcc3be772b09aeb4c88ebe6e57b79d7275da94758d6afa\",\"dweb:/ipfs/QmRFuDxB532sYwB8JXq5LdHLAfGigcAHMvh4T4TBVrHPwK\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol\":{\"keccak256\":\"0x21b8368e133ed2ee80f5feb602ff6bad7e3b9110b1ae90ea0faabf9c00527224\",\"urls\":[\"bzz-raw://ac1f35c6b92a163e16498daa3d471bfd218fad71f8067ae357950ddd31add718\",\"dweb:/ipfs/QmPk2WQbNXPW1jnnpDZXVxhgXATBU6fGwYFejWi21oL94M\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/ERC721Metadata.sol\":{\"keccak256\":\"0xb8deb41bb234969070dc362c144191f2781178c33cf6b434fd68aa3692834105\",\"urls\":[\"bzz-raw://83ef717ae1d047085d6ce2d63ed987c3282ba22190c09fa75f52346af2ac67bb\",\"dweb:/ipfs/QmQqQJor8zVE9kvYiCZscmerKrdLGgiELrn199zQEm7kZp\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x1f059ee943273719130df645fa38069b792988e8b732585528d5b1265f5aa046\",\"urls\":[\"bzz-raw://31e4d99091a83a42a6ea14d74ceae2ec3ffb2905c7ee07358875af72ea188333\",\"dweb:/ipfs/Qmf7nHc6BwhbyawapCVRZHzhBHNoA8ftpQWmGSyToVKVzN\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x1cded69b7f4e17fe634fecbf2bf43320beb11a95ba924c3665a11fc8f47dffc4\",\"urls\":[\"bzz-raw://013a7b38cce9bf8d10af9ec8b5e09be1ea6645da2e1958bf6ed8a875942ac6d6\",\"dweb:/ipfs/Qme9TC1YrXMpNHFoM8GHRjWtRWJ1LxRcYJCPSfoqY4yYri\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xa0bb72e035727b0631aac6380e899ad48511073a3d67f1da528f845d4a3121fb\",\"urls\":[\"bzz-raw://aa3f398156da37e868c7d22967457a70aa840097c7d532b0155208a0d2dbf63f\",\"dweb:/ipfs/QmUfBdHdyzY5FzhZPC46RDsqJfaqT9oLhsknP92pYqtM2g\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x5e7281dbd14cf07af0974ce830c6242062cd430b70658878d49b5f5c1e2ec0aa\",\"urls\":[\"bzz-raw://3c9374b456bf5fde2c473331ff75bed9c6be3634948ba6a6507e4c19c2abf605\",\"dweb:/ipfs/QmUm5NKd1ToSr8MHVVanQv3XEkQpmYKw2441KXYyXPE6np\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/openzeppelin-solidity/contracts/utils/Address.sol\":{\"keccak256\":\"0x5c731061b804fa256fc8c05150eafe5d20b6bb94541a8f187912bf84f7033f34\",\"urls\":[\"bzz-raw://a3c2d9f046beebab7fb41b1b124a6a124a36f510f7c67365861402ac831bdc71\",\"dweb:/ipfs/QmUtASRgitregbKH83anopLtF9vFQe3BKeAjhUa6F7t9YV\"]},\"/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol\":{\"keccak256\":\"0xd0068eb53f196e40fd94c46d15bc0a0b906dd1dc42755bce0423d64d9c451737\",\"urls\":[\"bzz-raw://f0de259bbf9f711c40cc6b566d7ac6514fcd29a6b02d92487ec6bb31258b0f21\",\"dweb:/ipfs/QmUmRf2kzZ6FWRbRZEe9Az4ThMXnPybXcxAKaDtbpRuhQE\"]},\"hardhat/console.sol\":{\"keccak256\":\"0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4\",\"urls\":[\"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763\",\"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820bfa6f2b90110e1a8c4569befba2d7c42fb18d5660a9a057c575361520262cc5464736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820bfa6f2b90110e1a8c4569befba2d7c42fb18d5660a9a057c575361520262cc5464736f6c63430005100032",
+  "sourceMap": "74:341:54:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:341:54;;;;;;;",
+  "deployedSourceMap": "74:341:54:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\nimport { PhotoNFT } from \"../../PhotoNFT.sol\";\n\n\ncontract PhotoNFTDataObjects {\n\n    struct Photo {  /// [Key]: index of array\n        PhotoNFT photoNFT;\n        string photoNFTName;\n        string photoNFTSymbol;\n        address ownerAddress;\n        uint256 photoPrice;\n        string ipfsHashOfPhoto;\n        string status;  /// \"Open\" or \"Cancelled\"\n        uint256 reputation;\n    }\n\n}\n",
+  "sourcePath": "/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
   "ast": {
-    "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
+    "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
     "exportedSymbols": {
       "PhotoNFTDataObjects": [
-        6115
+        5953
       ]
     },
-    "id": 6116,
+    "id": 5954,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6095,
+        "id": 5933,
         "literals": [
           "solidity",
           "^",
@@ -27,19 +27,19 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:55"
+        "src": "0:23:54"
       },
       {
-        "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/PhotoNFT.sol",
+        "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/PhotoNFT.sol",
         "file": "../../PhotoNFT.sol",
-        "id": 6097,
+        "id": 5935,
         "nodeType": "ImportDirective",
-        "scope": 6116,
-        "sourceUnit": 134,
-        "src": "25:46:55",
+        "scope": 5954,
+        "sourceUnit": 146,
+        "src": "25:46:54",
         "symbolAliases": [
           {
-            "foreign": 6096,
+            "foreign": 5934,
             "local": null
           }
         ],
@@ -51,39 +51,39 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6115,
+        "id": 5953,
         "linearizedBaseContracts": [
-          6115
+          5953
         ],
         "name": "PhotoNFTDataObjects",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "PhotoNFTDataObjects.Photo",
-            "id": 6114,
+            "id": 5952,
             "members": [
               {
                 "constant": false,
-                "id": 6099,
+                "id": 5937,
                 "name": "photoNFT",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "160:17:55",
+                "scope": 5952,
+                "src": "160:17:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PhotoNFT_$133",
+                  "typeIdentifier": "t_contract$_PhotoNFT_$145",
                   "typeString": "contract PhotoNFT"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 6098,
+                  "id": 5936,
                   "name": "PhotoNFT",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 133,
-                  "src": "160:8:55",
+                  "referencedDeclaration": 145,
+                  "src": "160:8:54",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PhotoNFT_$133",
+                    "typeIdentifier": "t_contract$_PhotoNFT_$145",
                     "typeString": "contract PhotoNFT"
                   }
                 },
@@ -92,11 +92,11 @@
               },
               {
                 "constant": false,
-                "id": 6101,
+                "id": 5939,
                 "name": "photoNFTName",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "187:19:55",
+                "scope": 5952,
+                "src": "187:19:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -104,10 +104,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6100,
+                  "id": 5938,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "187:6:55",
+                  "src": "187:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -118,11 +118,11 @@
               },
               {
                 "constant": false,
-                "id": 6103,
+                "id": 5941,
                 "name": "photoNFTSymbol",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "216:21:55",
+                "scope": 5952,
+                "src": "216:21:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -130,10 +130,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6102,
+                  "id": 5940,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "216:6:55",
+                  "src": "216:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -144,11 +144,11 @@
               },
               {
                 "constant": false,
-                "id": 6105,
+                "id": 5943,
                 "name": "ownerAddress",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "247:20:55",
+                "scope": 5952,
+                "src": "247:20:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -156,10 +156,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 6104,
+                  "id": 5942,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "247:7:55",
+                  "src": "247:7:54",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -171,11 +171,11 @@
               },
               {
                 "constant": false,
-                "id": 6107,
+                "id": 5945,
                 "name": "photoPrice",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "277:15:55",
+                "scope": 5952,
+                "src": "277:18:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -183,10 +183,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6106,
-                  "name": "uint",
+                  "id": 5944,
+                  "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "277:4:55",
+                  "src": "277:7:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -197,11 +197,11 @@
               },
               {
                 "constant": false,
-                "id": 6109,
+                "id": 5947,
                 "name": "ipfsHashOfPhoto",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "302:22:55",
+                "scope": 5952,
+                "src": "305:22:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -209,10 +209,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6108,
+                  "id": 5946,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "302:6:55",
+                  "src": "305:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -223,11 +223,11 @@
               },
               {
                 "constant": false,
-                "id": 6111,
+                "id": 5949,
                 "name": "status",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "334:13:55",
+                "scope": 5952,
+                "src": "337:13:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -235,10 +235,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6110,
+                  "id": 5948,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "334:6:55",
+                  "src": "337:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -249,11 +249,11 @@
               },
               {
                 "constant": false,
-                "id": 6113,
+                "id": 5951,
                 "name": "reputation",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "384:18:55",
+                "scope": 5952,
+                "src": "387:18:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -261,10 +261,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6112,
+                  "id": 5950,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "384:7:55",
+                  "src": "387:7:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -276,29 +276,29 @@
             ],
             "name": "Photo",
             "nodeType": "StructDefinition",
-            "scope": 6115,
-            "src": "110:299:55",
+            "scope": 5953,
+            "src": "110:302:54",
             "visibility": "public"
           }
         ],
-        "scope": 6116,
-        "src": "74:338:55"
+        "scope": 5954,
+        "src": "74:341:54"
       }
     ],
-    "src": "0:413:55"
+    "src": "0:416:54"
   },
   "legacyAST": {
-    "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
+    "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/photo-nft-data/commons/PhotoNFTDataObjects.sol",
     "exportedSymbols": {
       "PhotoNFTDataObjects": [
-        6115
+        5953
       ]
     },
-    "id": 6116,
+    "id": 5954,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6095,
+        "id": 5933,
         "literals": [
           "solidity",
           "^",
@@ -306,19 +306,19 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:55"
+        "src": "0:23:54"
       },
       {
-        "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-marketplace/contracts/PhotoNFT.sol",
+        "absolutePath": "/Users/yonatanmartsiano/Downloads/Swallow-2/contracts/PhotoNFT.sol",
         "file": "../../PhotoNFT.sol",
-        "id": 6097,
+        "id": 5935,
         "nodeType": "ImportDirective",
-        "scope": 6116,
-        "sourceUnit": 134,
-        "src": "25:46:55",
+        "scope": 5954,
+        "sourceUnit": 146,
+        "src": "25:46:54",
         "symbolAliases": [
           {
-            "foreign": 6096,
+            "foreign": 5934,
             "local": null
           }
         ],
@@ -330,39 +330,39 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6115,
+        "id": 5953,
         "linearizedBaseContracts": [
-          6115
+          5953
         ],
         "name": "PhotoNFTDataObjects",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "PhotoNFTDataObjects.Photo",
-            "id": 6114,
+            "id": 5952,
             "members": [
               {
                 "constant": false,
-                "id": 6099,
+                "id": 5937,
                 "name": "photoNFT",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "160:17:55",
+                "scope": 5952,
+                "src": "160:17:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_PhotoNFT_$133",
+                  "typeIdentifier": "t_contract$_PhotoNFT_$145",
                   "typeString": "contract PhotoNFT"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 6098,
+                  "id": 5936,
                   "name": "PhotoNFT",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 133,
-                  "src": "160:8:55",
+                  "referencedDeclaration": 145,
+                  "src": "160:8:54",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PhotoNFT_$133",
+                    "typeIdentifier": "t_contract$_PhotoNFT_$145",
                     "typeString": "contract PhotoNFT"
                   }
                 },
@@ -371,11 +371,11 @@
               },
               {
                 "constant": false,
-                "id": 6101,
+                "id": 5939,
                 "name": "photoNFTName",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "187:19:55",
+                "scope": 5952,
+                "src": "187:19:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -383,10 +383,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6100,
+                  "id": 5938,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "187:6:55",
+                  "src": "187:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -397,11 +397,11 @@
               },
               {
                 "constant": false,
-                "id": 6103,
+                "id": 5941,
                 "name": "photoNFTSymbol",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "216:21:55",
+                "scope": 5952,
+                "src": "216:21:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -409,10 +409,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6102,
+                  "id": 5940,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "216:6:55",
+                  "src": "216:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -423,11 +423,11 @@
               },
               {
                 "constant": false,
-                "id": 6105,
+                "id": 5943,
                 "name": "ownerAddress",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "247:20:55",
+                "scope": 5952,
+                "src": "247:20:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -435,10 +435,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 6104,
+                  "id": 5942,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "247:7:55",
+                  "src": "247:7:54",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -450,11 +450,11 @@
               },
               {
                 "constant": false,
-                "id": 6107,
+                "id": 5945,
                 "name": "photoPrice",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "277:15:55",
+                "scope": 5952,
+                "src": "277:18:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -462,10 +462,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6106,
-                  "name": "uint",
+                  "id": 5944,
+                  "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "277:4:55",
+                  "src": "277:7:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -476,11 +476,11 @@
               },
               {
                 "constant": false,
-                "id": 6109,
+                "id": 5947,
                 "name": "ipfsHashOfPhoto",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "302:22:55",
+                "scope": 5952,
+                "src": "305:22:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -488,10 +488,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6108,
+                  "id": 5946,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "302:6:55",
+                  "src": "305:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -502,11 +502,11 @@
               },
               {
                 "constant": false,
-                "id": 6111,
+                "id": 5949,
                 "name": "status",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "334:13:55",
+                "scope": 5952,
+                "src": "337:13:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -514,10 +514,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 6110,
+                  "id": 5948,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "334:6:55",
+                  "src": "337:6:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -528,11 +528,11 @@
               },
               {
                 "constant": false,
-                "id": 6113,
+                "id": 5951,
                 "name": "reputation",
                 "nodeType": "VariableDeclaration",
-                "scope": 6114,
-                "src": "384:18:55",
+                "scope": 5952,
+                "src": "387:18:54",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -540,10 +540,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 6112,
+                  "id": 5950,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "384:7:55",
+                  "src": "387:7:54",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -555,16 +555,16 @@
             ],
             "name": "Photo",
             "nodeType": "StructDefinition",
-            "scope": 6115,
-            "src": "110:299:55",
+            "scope": 5953,
+            "src": "110:302:54",
             "visibility": "public"
           }
         ],
-        "scope": 6116,
-        "src": "74:338:55"
+        "scope": 5954,
+        "src": "74:341:54"
       }
     ],
-    "src": "0:413:55"
+    "src": "0:416:54"
   },
   "compiler": {
     "name": "solc",
@@ -572,7 +572,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-07-30T15:29:19.297Z",
+  "updatedAt": "2021-08-02T09:48:48.150Z",
   "devdoc": {
     "methods": {}
   },

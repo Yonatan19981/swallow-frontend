@@ -5,6 +5,7 @@ import { Loader, Button, Card, Input, Table, Form, Field, Image } from 'rimble-u
 import { zeppelinSolidityHotLoaderOptions } from '../../webpack';
 
 import styles from '../../App.module.scss';
+const address= require('../../Addresses');
 
 
 export default class PhotoMarketplace extends Component {
@@ -41,8 +42,8 @@ export default class PhotoMarketplace extends Component {
     /// Functions of buying a photo NFT 
     ///---------------------------------
     buyPhotoNFT = async (e) => {
-        const { web3, accounts, photoNFTMarketplace, photoNFTData } = this.state;
-        //const { web3, accounts, photoNFTMarketplace, photoNFTData, valuePhotoNFTAddress } = this.state;
+        const { web3, accounts, photoNFTMarketPlace, photoNFTData } = this.state;
+        //const { web3, accounts, photoNFTMarketPlace, photoNFTData, valuePhotoNFTAddress } = this.state;
 
         console.log('=== value of buyPhotoNFT ===', e.target.value);
 
@@ -54,7 +55,9 @@ export default class PhotoMarketplace extends Component {
         let PhotoNFT = {};
         PhotoNFT = require("../../contracts/PhotoNFT.json"); 
         let photoNFT = new web3.eth.Contract(PhotoNFT.abi, PHOTO_NFT);
-
+        console.log("====photo NFT address====",PHOTO_NFT)
+        console.log("====photo NFT====",photoNFT)
+        console.log("====photo id====",1)
         /// Check owner of photoId
         const photoId = 1;  /// [Note]: PhotoID is always 1. Because each photoNFT is unique.
         const owner = await photoNFT.methods.ownerOf(photoId).call();
@@ -62,7 +65,7 @@ export default class PhotoMarketplace extends Component {
 
         const photo = await photoNFTData.methods.getPhotoByNFTAddress(PHOTO_NFT).call();
         const buyAmount = await photo.photoPrice;
-        const txReceipt1 = await photoNFTMarketplace.methods.buyPhotoNFT(PHOTO_NFT).send({ from: accounts[0], value: buyAmount });
+        const txReceipt1 = await photoNFTMarketPlace.methods.buyPhotoNFT(PHOTO_NFT).send({ from: accounts[0], value: buyAmount });
         console.log('=== response of buyPhotoNFT ===', txReceipt1);
     }
 
@@ -71,15 +74,15 @@ export default class PhotoMarketplace extends Component {
     /// Functions of reputation 
     ///---------------------------
     addReputation = async () => {
-        const { accounts, photoNFTMarketplace } = this.state;
+        const { accounts, photoNFTMarketPlace } = this.state;
 
         let _from2 = "0x2cb2418B11B66E331fFaC7FFB0463d91ef8FE8F5"
         let _to2 = accounts[0]
         let _tokenId2 = 1
-        const response_1 = await photoNFTMarketplace.methods.reputation(_from2, _to2, _tokenId2).send({ from: accounts[0] })
+        const response_1 = await photoNFTMarketPlace.methods.reputation(_from2, _to2, _tokenId2).send({ from: accounts[0] })
         console.log('=== response of reputation function ===', response_1);      // Debug
 
-        const response_2 = await photoNFTMarketplace.methods.getReputationCount(_tokenId2).call()
+        const response_2 = await photoNFTMarketPlace.methods.getReputationCount(_tokenId2).call()
         console.log('=== response of getReputationCount function ===', response_2);      // Debug
     }
 
@@ -156,7 +159,7 @@ export default class PhotoMarketplace extends Component {
               if (deployedNetwork) {
                 instancePhotoNFTMarketplace = new web3.eth.Contract(
                   PhotoNFTMarketplace.abi,
-                  deployedNetwork && deployedNetwork.address,
+                  address[1].address,
                 );
                 console.log('=== instancePhotoNFTMarketplace ===', instancePhotoNFTMarketplace);
               }
@@ -167,7 +170,7 @@ export default class PhotoMarketplace extends Component {
               if (deployedNetwork) {
                 instancePhotoNFTData = new web3.eth.Contract(
                   PhotoNFTData.abi,
-                  deployedNetwork && deployedNetwork.address,
+                  address[0].address,
                 );
                 console.log('=== instancePhotoNFTData ===', instancePhotoNFTData);
               }
@@ -186,7 +189,7 @@ export default class PhotoMarketplace extends Component {
                     hotLoaderDisabled,
                     isMetaMask, 
                     currentAccount: currentAccount, 
-                    photoNFTMarketplace: instancePhotoNFTMarketplace,
+                    photoNFTMarketPlace: instancePhotoNFTMarketplace,
                     photoNFTData: instancePhotoNFTData }, () => {
                       this.refreshValues(instancePhotoNFTMarketplace);
                       setInterval(() => {
