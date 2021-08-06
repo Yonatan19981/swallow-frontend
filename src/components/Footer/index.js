@@ -8,7 +8,7 @@ const Footer = () => (
       <div className={styles.created}>
       </div>
       <div className={styles.copyright}>
-        Swallow - A marketplace for digital tattoo rights
+      SWALLOW- The marketplace for digital tattoos 
       </div>
     </div>
   </footer>

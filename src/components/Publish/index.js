@@ -1,13 +1,65 @@
 import React, { Component } from "react";
 import getWeb3, { getGanacheWeb3, Web3 } from "../../utils/getWeb3";
 import ipfs from '../ipfs/ipfsApi.js'
-
 import { Grid } from '@material-ui/core';
-import { Loader, Button, Card, Input, Heading, Table, Form, Field } from 'rimble-ui';
+import { Loader, Input, Heading, Table ,Field} from 'rimble-ui';
 import { zeppelinSolidityHotLoaderOptions } from '../../webpack';
-
 import styles from '../../App.module.scss';
+import styled from "styled-components";
+
+
 const address= require('../../Addresses');
+const theme = {
+  orange: {
+    default: "#FD6363",
+    hover: "#FD5050"
+  },
+ 
+};
+const Form = styled.h1`
+  background-color:black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  outline: 1;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px lightgray;
+  transition: ease background-color 250ms;
+  font-family:'MonoSpec-medium';
+`;
+
+const Card = styled.h1`
+
+  font-family:'MonoSpec-medium';
+`;
+
+const Button = styled.button`
+  background-color: ${(props) => theme[props.theme].default};
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: 0;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px lightgray;
+  transition: ease background-color 250ms;
+  font-family:'MonoSpec-medium';
+
+  &:hover {
+    background-color: ${(props) => theme[props.theme].hover};
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+`;
+
+Button.defaultProps = {
+  theme: "orange"
+};
 
 
 export default class Publish extends Component {
@@ -270,25 +322,26 @@ export default class Publish extends Component {
     render()  {
         return (
             <div className={styles.left}>
-                <Grid container style={{ marginTop: 20 }}>
-                    <Grid item xs={10}>
+            <Grid container spacing={5}>
+
                       
                         <Card width={"420px"} 
                               maxWidth={"420px"} 
                               mx={"auto"} 
                               my={5} 
                               p={20} 
-                              borderColor={"#E8E8E8"}
+                              borderColor={"#000"}
+                              
                         >
-                            <h2>Publish and Put on Sale</h2>
-                            <p>Please upload your Tattoo and put it on sale from here!</p>
+                            <h2>BEGIN YOUR SWALLOW JOURNEY HERE</h2>
 
                             <Form onSubmit={this.onSubmit}>
-                                <Field label="Name you tattoo">
+                                <Field>
+                                <h4>ARTWORK NAME</h4>
                                     <Input
                                         type="text"
                                         width={1}
-                                        placeholder="Please write the name of your tattoo"
+                                        placeholder="Please write the name of your artwork here"
                                         required={true}
                                         value={this.state.valueNFTName} 
                                         onChange={this.handleNFTName} 
@@ -308,7 +361,8 @@ export default class Publish extends Component {
                                 </Field>
                                 */}
 
-                                <Field label="The price in ETH in which you want to sell your tattoo rights">
+                                <Field >
+                                <h4>PRICE IN ETH</h4>
                                     <Input
                                         type="text"
                                         width={1}
@@ -319,7 +373,8 @@ export default class Publish extends Component {
                                     />
                                 </Field>
 
-                                <Field label="Tattoo file to upload">
+                                <Field>
+                                <h4>UPLOAD FILE</h4>
                                     <input 
                                         type='file' 
                                         onChange={this.captureFile} 
@@ -327,17 +382,13 @@ export default class Publish extends Component {
                                     />
                                 </Field>
 
-                                <Button size={'medium'} width={1} type='submit'>Upload my tattoo and put it on sale</Button>
+                                <Button size={'medium'} width={1} type='submit'  >CONVERT TO NFT</Button>
+                      
                             </Form>
                         </Card>
-                    </Grid>
+                
+                        </Grid>
 
-                    <Grid item xs={1}>
-                    </Grid>
-
-                    <Grid item xs={1}>
-                    </Grid>
-                </Grid>
             </div>
         );
     }

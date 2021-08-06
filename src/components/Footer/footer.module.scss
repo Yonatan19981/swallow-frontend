@@ -5,10 +5,10 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
-  background: $white;
+  background: $black;
   border-top: 1px solid #b9b6b6;
   padding: 25px 100px;
-
+  font-family:'MonoSpec-medium';
   .brand {
     display: flex;
     flex-flow: column nowrap;
@@ -27,19 +27,14 @@
         margin-right: 14px;
       }
 
-      a {
-        color: $white;
-        margin-top: 4px;
-      }
+   
 
       span {
         color: $white;
         margin-left: 60px;
         line-height: 30px;
 
-        a {
-          color: $purple-aux;
-        }
+     
       }
     }
 
@@ -56,9 +51,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
-    a {
-      margin: 0 10px;
-    }
+ 
     img {
       width: 21px;
     }

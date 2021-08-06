@@ -9,7 +9,7 @@
   align-items: flex-start;
   justify-content: space-around;
   background: linear-gradient(to bottom, #3C4653 , #212830);
-
+  font-family:'MonoSpec-medium';
   .hwrapper {
     display: flex;
     flex-flow: row wrap;
@@ -50,6 +50,15 @@
       width: 92%;
     }
   }
+.button {
+  background-color: #6772e5;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+}
+.button:hover {
+  background-color: #5469d4;
+}
 
   .sellingpoints {
     display: flex;
@@ -62,18 +71,8 @@
       font-size: 1em;
       font-weight: 400;
       opacity: 0.9;
+      
 
-      a {
-        color: $white;
-        font-weight: 600;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: none;
-          border-bottom: 2px solid #fff;
-        }
-      }
-    }
   }
 
   .ctas {
@@ -99,3 +98,4 @@
     min-width: 92%;
   }
 }
+

@@ -1,12 +1,47 @@
 import React, { Component } from "react";
 import getWeb3, { getGanacheWeb3, Web3 } from "../../utils/getWeb3";
 
-import { Loader, Button, Card, Input, Table, Form, Field, Image } from 'rimble-ui';
+import { Loader, Card, Input, Table, Form, Field, Image } from 'rimble-ui';
 import { zeppelinSolidityHotLoaderOptions } from '../../webpack';
 import { contractAddresses } from '../../Addresses';
 import styles from '../../App.module.scss';
-const address= require('../../Addresses');
+import styled from "styled-components";
+import { Grid } from '@material-ui/core';
 
+const address= require('../../Addresses');
+const theme = {
+  orange: {
+    default: "#FD6363",
+    hover: "#FD5050"
+  },
+ 
+};
+
+const Button = styled.button`
+  background-color: ${(props) => theme[props.theme].default};
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: 0;
+  text-transform: uppercase;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px lightgray;
+  transition: ease background-color 250ms;
+  font-family:'MonoSpec-medium';
+
+  &:hover {
+    background-color: ${(props) => theme[props.theme].hover};
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+`;
+
+Button.defaultProps = {
+  theme: "orange"
+};
 
 console.log(address[0].address)
 
@@ -238,14 +273,14 @@ export default class MyPhotos extends Component {
 
         return (
             <div className={styles.contracts}>
-              <h2>My Tattoos</h2>
+              <h2>MY COLLECTION</h2>
+              <Grid container spacing={4}>
 
-              { allPhotos.map((photo, key) => {
-                return (
-                  <div key={key} className="">
-                    <div className={styles.widgets}>
+              { allPhotos.map((photo, key) => (
+                <Grid item xs={4}>
+               
 
-                        { currentAccount == photo.ownerAddress ? 
+                    { currentAccount == photo.ownerAddress ? 
                             <Card width={"360px"} 
                                     maxWidth={"360px"} 
                                     mx={"auto"} 
@@ -283,10 +318,10 @@ export default class MyPhotos extends Component {
                             ''
                         }
 
-                    </div>
-                  </div>
+                        </Grid>
                 )
-              }) }
+              ) }
+              </Grid>
             </div>
         );
     }

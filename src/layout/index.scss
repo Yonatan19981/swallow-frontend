@@ -13,22 +13,13 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  font: 112.5%/1.45em 'Roboto',sans-serif;
+  font: 112.5%/1.45em 'MonoSpec-medium';
   box-sizing: border-box;
   overflow-y: scroll;
   background: $white;
-  color: $primary;
 }
 
-a {
-  color: $blue;
-  text-decoration: none;
-  cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
 
 * {
   box-sizing: inherit;
@@ -163,6 +154,8 @@ button {
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+  
+  
 
   &.purple {
     background: $primary;
@@ -205,3 +198,4 @@ input {
     font-size: 100%;
   }
 }
+

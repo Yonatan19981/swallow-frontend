@@ -1,19 +1,29 @@
 import React from 'react';
 import styles from './header.module.scss';
 import getWeb3, { getGanacheWeb3, Web3 } from "../../utils/getWeb3";
+import styled from "styled-components";
 
-
+const Title = styled.h1`
+  font-size: 1em;
+  text-align: center;
+  color: white;!important;
+  text-decoration:none;
+  &:hover {
+    text-decoration:underline;
+  }
+`;
 const Header = () => (
     <div className={styles.header}>
         <nav id="menu" className="menu">
           <ul>
 
-            <li><a href="/publish" className={styles.link}> Publish your tattoo </a></li>
+            <li><Title as="a" href="/publish" className={styles.link}> CREATE YOUR NFT </Title></li>
 
-            <li><a href="/my-photos" className={styles.link}> My Tattoos</a></li>
+            <li><Title as="a" href="/my-photos" className={styles.link}> MY COLLECTION</Title></li>
 
             {process.env.NODE_ENV !== 'photo_marketplace' && (
-              <li><a href="/photo-marketplace" className={styles.link}> Tattoos for sale</a></li>
+              <li>
+                <Title as="a" href="/photo-marketplace" className={styles.link}>ART</Title></li>
             )}
           </ul>
         </nav>
