@@ -382,7 +382,7 @@ export default class Publish extends Component {
                                     />
                                 </Field>
 
-                                <Button size={'medium'} width={1} type='submit'  >CONVERT TO NFT</Button>
+                                <Button size={'medium'} width={1} onClick={this.onSubmit}  >CONVERT TO NFT</Button>
                       
                             </Form>
                         </Card>
