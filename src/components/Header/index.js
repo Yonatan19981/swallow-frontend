@@ -16,7 +16,8 @@ const Header = () => (
     <div className={styles.header}>
         <nav id="menu" className="menu">
           <ul>
-
+          <li><img src="./Swallow_logo.jpg" alt="bug" height={50} /></li>
+          
             <li><Title as="a" href="/publish" className={styles.link}> CREATE YOUR NFT </Title></li>
 
             <li><Title as="a" href="/my-photos" className={styles.link}> MY COLLECTION</Title></li>

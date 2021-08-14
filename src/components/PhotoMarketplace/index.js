@@ -154,7 +154,7 @@ export default class PhotoMarketplace extends Component {
         let PhotoNFTMarketplace = {};
         let PhotoNFTData = {};
         try {
-          PhotoNFTMarketplace = require("../../contracts/PhotoNFTMarketplace.json");
+          PhotoNFTMarketplace = require("../../contracts/PhotoNFTMarketPlace.json");
           PhotoNFTData = require("../../contracts/PhotoNFTData.json");
         } catch (e) {
           console.log(e);
@@ -188,27 +188,21 @@ export default class PhotoMarketplace extends Component {
             let deployedNetwork = null;
 
             // Create instance of contracts
-            if (PhotoNFTMarketplace.networks) {
-              deployedNetwork = PhotoNFTMarketplace.networks[networkId.toString()];
-              if (deployedNetwork) {
+           
                 instancePhotoNFTMarketplace = new web3.eth.Contract(
                   PhotoNFTMarketplace.abi,
                   address[1].address,
                 );
                 console.log('=== instancePhotoNFTMarketplace ===', instancePhotoNFTMarketplace);
-              }
-            }
+         
 
-            if (PhotoNFTData.networks) {
-              deployedNetwork = PhotoNFTData.networks[networkId.toString()];
-              if (deployedNetwork) {
+  
                 instancePhotoNFTData = new web3.eth.Contract(
                   PhotoNFTData.abi,
                   address[0].address,
                 );
                 console.log('=== instancePhotoNFTData ===', instancePhotoNFTData);
-              }
-            }
+        
 
             if (instancePhotoNFTMarketplace) {
                 // Set web3, accounts, and contract to the state, and then proceed with an
