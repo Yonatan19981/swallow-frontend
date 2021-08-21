@@ -1,12 +1,20 @@
 import React, { Component } from "react";
-import getWeb3, { getGanacheWeb3, Web3 } from "../../utils/getWeb3";
-
-import { Loader, Card, Input, Table, Form, Field, Image } from 'rimble-ui';
+import getWeb3, { Web3 } from "../../utils/getWeb3";
+import classNames from "classnames";
+import { Loader, Card, Input, Table, Form, Field, Image ,Box} from 'rimble-ui';
 import { zeppelinSolidityHotLoaderOptions } from '../../webpack';
 import { contractAddresses } from '../../Addresses';
-import styles from '../../App.module.scss';
 import styled from "styled-components";
 import { Grid } from '@material-ui/core';
+import GridContainer from "../Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+import { makeStyles } from "@material-ui/core/styles";
+import cardsStyle from "../../assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js";
+import CardBody from "../Card/CardBody.js";
+import CardHeader from "../Card/CardHeader.js";
+import styles from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
+import { whiteColor } from "../../assets/jss/material-kit-pro-react";
+import Card1Component from "../Card/CardComponent.js";
 
 const address= require('../../Addresses');
 const theme = {
@@ -44,8 +52,9 @@ Button.defaultProps = {
 };
 
 console.log(address[0].address)
-
+const useStyles = makeStyles(styles);
 export default class MyPhotos extends Component {
+  
     constructor(props) {    
         super(props);
 
@@ -56,7 +65,7 @@ export default class MyPhotos extends Component {
           accounts: null,
           currentAccount: null,
           route: window.location.pathname.replace("/", ""),
-
+            
           /////// NFT
           allPhotos: []
         };
@@ -79,8 +88,13 @@ export default class MyPhotos extends Component {
     /// Functions put a photo NFT on sale or cancel it on sale 
     ///---------------------------------------------------------
     putOnSale = async (e) => {
-        const { web3, accounts, photoNFTMarketPlace, photoNFTData, PHOTO_NFT_MARKETPLACE } = this.state;
-
+      const web3 = this.props.web3;
+      const accounts=this.props.accounts;
+      const balance=this.props.balance;
+      const photoNFTMarketPlace=this.props.photoNFTMarketPlace;
+      const photoNFTData=this.props.photoNFTData;
+      const allPhotos=this.props.allPhotos;
+      let PHOTO_NFT_MARKETPLACE= this.props.PHOTO_NFT_MARKETPLACE;
         console.log('=== value of putOnSale ===', e.target.value);
         console.log('=== PHOTO_NFT_MARKETPLACE ===', PHOTO_NFT_MARKETPLACE);
 
@@ -103,7 +117,13 @@ export default class MyPhotos extends Component {
     }
 
     cancelOnSale = async (e) => {
-        const { web3, accounts, photoNFTMarketPlace, photoNFTData, PHOTO_NFT_MARKETPLACE } = this.state;
+      const web3 = this.props.web3;
+      const accounts=this.props.accounts;
+      const balance=this.props.balance;
+      const photoNFTMarketPlace=this.props.photoNFTMarketPlace;
+      const photoNFTData=this.props.photoNFTData;
+      const allPhotos=this.props.allPhotos;
+
 
         console.log('=== value of cancelOnSale ===', e.target.value);
 
@@ -126,127 +146,10 @@ export default class MyPhotos extends Component {
     }
 
 
-    ///------------------------------------- 
-    /// NFT（Always load listed NFT data）
-    ///-------------------------------------
-    getAllPhotos = async () => {
-        const { photoNFTData } = this.state
-
-        const allPhotos = await photoNFTData.methods.getAllPhotos().call()
-        console.log('=== allPhotos ===', allPhotos)
-
-        this.setState({ allPhotos: allPhotos })
-        return allPhotos
-    }
-
-
-    //////////////////////////////////// 
-    /// Ganache
-    ////////////////////////////////////
-    getGanacheAddresses = async () => {
-        if (!this.ganacheProvider) {
-          this.ganacheProvider = getGanacheWeb3();
-        }
-        if (this.ganacheProvider) {
-          return await this.ganacheProvider.eth.getAccounts();
-        }
-        return [];
-    }
 
     componentDidMount = async () => {
         const hotLoaderDisabled = zeppelinSolidityHotLoaderOptions.disabled;
      
-        let PhotoNFTMarketplace = {};
-        let PhotoNFTData = {};
-        try {
-          PhotoNFTMarketplace = require("../../contracts/PhotoNFTMarketPlace.json");
-          PhotoNFTData = require("../../contracts/PhotoNFTData.json");
-        } catch (e) {
-          console.log(e);
-        }
-
-        try {
-        
-            // Get network provider and web3 instance.
-            const web3 = await getWeb3();
-            let ganacheAccounts = [];
-
-            try {
-              ganacheAccounts = await this.getGanacheAddresses();
-            } catch (e) {
-              console.log('Ganache is not running');
-            }
-
-            // Use web3 to get the user's accounts.
-            const accounts = await web3.eth.getAccounts();
-            const currentAccount = accounts[0];
-
-            // Get the contract instance.
-            const networkId = await web3.eth.net.getId();
-            const networkType = await web3.eth.net.getNetworkType();
-            const isMetaMask = web3.currentProvider.isMetaMask;
-            let balance = accounts.length > 0 ? await web3.eth.getBalance(accounts[0]): web3.utils.toWei('0');
-            balance = web3.utils.fromWei(balance, 'ether');
-
-            let instancePhotoNFTMarketplace = null;
-            let instancePhotoNFTData = null;
-            let PHOTO_NFT_MARKETPLACE;
-            let deployedNetwork = null;
-
-            // Create instance of contracts
-       
-            instancePhotoNFTMarketplace = new web3.eth.Contract(
-              PhotoNFTMarketplace.abi,
-              address[1].address,
-            );
-            PHOTO_NFT_MARKETPLACE = address[1].address;
-            console.log('=== instancePhotoNFTMarketplace ===', instancePhotoNFTMarketplace);
-            console.log('=== PHOTO_NFT_MARKETPLACE ===', PHOTO_NFT_MARKETPLACE);
-          
-                instancePhotoNFTData = new web3.eth.Contract(
-                  PhotoNFTData.abi,
-                  address[0].address,
-                );
-                console.log('=== instancePhotoNFTData ===', instancePhotoNFTData);
-      
-
-            if (instancePhotoNFTMarketplace) {
-                // Set web3, accounts, and contract to the state, and then proceed with an
-                // example of interacting with the contract's methods.
-                this.setState({ 
-                    web3, 
-                    ganacheAccounts, 
-                    accounts, 
-                    balance, 
-                    networkId, 
-                    networkType, 
-                    hotLoaderDisabled,
-                    isMetaMask, 
-                    currentAccount: currentAccount,
-                    photoNFTMarketPlace: instancePhotoNFTMarketplace,
-                    photoNFTData: instancePhotoNFTData,
-                    PHOTO_NFT_MARKETPLACE: PHOTO_NFT_MARKETPLACE }, () => {
-                      this.refreshValues(instancePhotoNFTMarketplace);
-                      setInterval(() => {
-                        this.refreshValues(instancePhotoNFTMarketplace);
-                    }, 5000);
-                });
-            }
-            else {
-              this.setState({ web3, ganacheAccounts, accounts, balance, networkId, networkType, hotLoaderDisabled, isMetaMask });
-            }
-
-            ///@dev - NFT（Always load listed NFT data
-            const allPhotos = await this.getAllPhotos();
-            this.setState({ allPhotos: allPhotos })
-          
-        } catch (error) {
-          // Catch any errors for any of the above operations.
-          alert(
-            `Failed to load web3, accounts, or contract. Check console for details.`,
-          );
-          console.error(error);
-        }
     };
 
     componentWillUnmount() {
@@ -262,59 +165,76 @@ export default class MyPhotos extends Component {
     }
 
     render() {
-        const { web3, allPhotos, currentAccount } = this.state;
 
+    
+     
+      const accounts=this.props.accounts;
+      let web3 =null;
+      let balance=null;
+      let photoNFTMarketPlace=null;
+      let photoNFTData=null;
+      let currentAccount=null;
+      let allPhotos=null;
+      if(accounts){
+        web3 = this.props.web3;
+        balance=this.props.balance;
+        photoNFTMarketPlace=this.props.PhotoNFTMarketplace;
+        photoNFTData=this.props.PhotoNFTData;
+        currentAccount=this.props.accounts[0];
+        allPhotos=this.props.allPhotos;
+        }
         return (
-            <div className={styles.contracts}>
+            <div >
               <h2>MY COLLECTION</h2>
-              <Grid container spacing={4}>
+         
+              {allPhotos && (
+              <GridContainer spacing={1}>
 
               { allPhotos.map((photo, key) => (
-                <Grid item xs={4}>
-               
+                <GridItem xs={3} spacing={4}>
+                  
 
                     { currentAccount == photo.ownerAddress ? 
-                            <Card width={"360px"} 
-                                    maxWidth={"360px"} 
-                                    mx={"auto"} 
-                                    my={5} 
-                                    p={20} 
-                                    borderColor={"#E8E8E8"}
+                            <Card 
+                            width={"300px"} 
+                            maxWidth={"300px"} 
+                            maxHeight={"600px"} 
+                            mx={"auto"} 
+                            my={"auto"} 
+                            p={20} 
+                            borderColor={"#FD6363"}
+                            backgroundColor={"#010100"}
+                                  
                             >
                               <Image
                                 alt="random unsplash image"
                                 borderRadius={8}
-                                height="100%"
-                                maxWidth='100%'
+                                maxheight="300"
+                                maxWidth='200'
                                 src={ `https://ipfs.io/ipfs/${photo.ipfsHashOfPhoto}` }
                               />
 
-                              <span style={{ padding: "20px" }}></span>
-
-                              <p>Photo Name: { photo.photoNFTName }</p>
-
-                              <p>Price: { web3.utils.fromWei(`${photo.photoPrice}`, 'ether') } ETH</p>
-
-                              <p>Owner: { photo.ownerAddress }</p>
-                              
-                              <br />
-
+                              <p style={{fontSize:13,color:whiteColor }}>Photo Name: { photo.photoNFTName }  {
+                                
+                              }</p>
+                              <p style={{fontSize:13 ,color:whiteColor}}>Price: { web3.utils.fromWei(`${photo.photoPrice}`, 'ether') } ETH</p>
+                              <p style={{fontSize:13,color:whiteColor }}>Owner: { photo.ownerAddress }</p>
                               { photo.status == "Cancelled" ? 
                                   <Button size={'medium'} width={1} value={ photo.photoNFT } onClick={this.putOnSale}> Put on sale </Button>
                               :
                                   <Button size={'medium'} width={1} value={ photo.photoNFT } onClick={this.cancelOnSale}> Cancel on sale </Button>
                               }
-
-                              <span style={{ padding: "5px" }}></span>
+                              <span style={{ padding: "0px" }}></span>
                             </Card>
                         :
                             ''
                         }
 
-                        </Grid>
+                        </GridItem>
                 )
               ) }
-              </Grid>
+              </GridContainer>
+              )}
             </div>
         );
     }

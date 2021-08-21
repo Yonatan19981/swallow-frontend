@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getWeb3, { getGanacheWeb3, Web3 } from "../../utils/getWeb3";
+import getWeb3, { Web3 } from "../../utils/getWeb3";
 import ipfs from '../ipfs/ipfsApi.js'
 import { Grid } from '@material-ui/core';
 import { Loader, Input, Heading, Table ,Field} from 'rimble-ui';
@@ -8,7 +8,6 @@ import styles from '../../App.module.scss';
 import styled from "styled-components";
 
 
-const address= require('../../Addresses');
 const theme = {
   orange: {
     default: "#FD6363",
@@ -89,7 +88,7 @@ export default class Publish extends Component {
         this.handleNFTSymbol = this.handleNFTSymbol.bind(this);
         this.handleNFTOwner = this.handleNFTOwner.bind(this);
         this.handlePhotoPrice = this.handlePhotoPrice.bind(this);
-
+ 
         /////// Ipfs Upload
         this.captureFile = this.captureFile.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -112,7 +111,7 @@ export default class Publish extends Component {
     handlePhotoPrice(event) {
         this.setState({ valuePhotoPrice: event.target.value });
     }
-
+   
     ///--------------------------
     /// Functions of ipfsUpload 
     ///-------------------------- 
@@ -131,8 +130,16 @@ export default class Publish extends Component {
     }
       
     onSubmit(event) {
-        const { web3, accounts, photoNFTFactory, photoNFTMarketPlace, PHOTO_NFT_MARKETPLACE, valueNFTName, valueNFTSymbol,valueNFTOwner, valuePhotoPrice } = this.state;
-
+      const web3 = this.props.web3;
+      const accounts=this.props.accounts;
+      const balance=this.props.balance;
+      const photoNFTMarketPlace=this.props.photoNFTMarketPlace;
+      const photoNFTData=this.props.photoNFTData;
+      const allPhotos=this.props.allPhotos;
+      const photoNFTFactory=this.props.photoNFTFactory;
+      const PHOTO_NFT_MARKETPLACE=this.props.PHOTO_NFT_MARKETPLACE;
+        const {valueNFTName, valueNFTSymbol,valueNFTOwner, valuePhotoPrice } = this.state;
+        console.log("web3 instande is:",web3);
         event.preventDefault()
 
         ipfs.files.add(this.state.buffer, (error, result) => {
@@ -203,109 +210,9 @@ export default class Publish extends Component {
         })
     }  
 
-     
-    //////////////////////////////////// 
-    /// Ganache
-    ////////////////////////////////////
-    getGanacheAddresses = async () => {
-        if (!this.ganacheProvider) {
-          this.ganacheProvider = getGanacheWeb3();
-        }
-        if (this.ganacheProvider) {
-          return await this.ganacheProvider.eth.getAccounts();
-        }
-        return [];
-    }
 
     componentDidMount = async () => {
         const hotLoaderDisabled = zeppelinSolidityHotLoaderOptions.disabled;
-     
-        let PhotoNFTFactory = {};
-        let PhotoNFTMarketplace = {};
-        try {
-          PhotoNFTFactory = require("../../contracts/PhotoNFTFactory.json"); // Load ABI of contract of PhotoNFTFactory
-          PhotoNFTMarketplace = require("../../contracts/PhotoNFTMarketPlace.json");
-        } catch (e) {
-          console.log(e);
-        }
-
-        try {
-        
-            // Get network provider and web3 instance.
-            const web3 = await getWeb3();
-            let ganacheAccounts = [];
-
-            try {
-              ganacheAccounts = await this.getGanacheAddresses();
-            } catch (e) {
-              console.log('Ganache is not running');
-            }
-
-            // Use web3 to get the user's accounts.
-            const accounts = await web3.eth.getAccounts();
-            // Get the contract instance.
-            const networkId = await web3.eth.net.getId();
-            const networkType = await web3.eth.net.getNetworkType();
-            const isMetaMask = web3.currentProvider.isMetaMask;
-            let balance = accounts.length > 0 ? await web3.eth.getBalance(accounts[0]): web3.utils.toWei('0');
-            balance = web3.utils.fromWei(balance, 'ether');
-
-            let instancePhotoNFTFactory = null;
-            let instancePhotoNFTMarketplace = null;
-            let PHOTO_NFT_MARKETPLACE;
-            let deployedNetwork = null;
-
-            // Create instance of contracts
-   
-                instancePhotoNFTFactory = new web3.eth.Contract(
-                  PhotoNFTFactory.abi,
-                  address[2].address,
-                );
-                console.log('=== instancePhotoNFTFactory ===', instancePhotoNFTFactory);
-         
-
-     
-                instancePhotoNFTMarketplace = new web3.eth.Contract(
-                  PhotoNFTMarketplace.abi,
-                  address[1].address,
-                );
-                PHOTO_NFT_MARKETPLACE = address[1].address;
-                console.log('=== instancePhotoNFTMarketplace ===', instancePhotoNFTMarketplace);
-                console.log('=== PHOTO_NFT_MARKETPLACE ===', PHOTO_NFT_MARKETPLACE);
-         
-
-            if (instancePhotoNFTFactory) {
-                // Set web3, accounts, and contract to the state, and then proceed with an
-                // example of interacting with the contract's methods.
-                this.setState({ 
-                    web3, 
-                    ganacheAccounts, 
-                    accounts, 
-                    balance, 
-                    networkId, 
-                    networkType, 
-                    hotLoaderDisabled,
-                    isMetaMask, 
-                    photoNFTFactory: instancePhotoNFTFactory,
-                    photoNFTMarketPlace: instancePhotoNFTMarketplace, 
-                    PHOTO_NFT_MARKETPLACE: PHOTO_NFT_MARKETPLACE }, () => {
-                      this.refreshValues(instancePhotoNFTFactory);
-                      setInterval(() => {
-                        this.refreshValues(instancePhotoNFTFactory);
-                    }, 5000);
-                });
-            }
-            else {
-              this.setState({ web3, ganacheAccounts, accounts, balance, networkId, networkType, hotLoaderDisabled, isMetaMask });
-            }
-          
-        } catch (error) {
-          // Catch any errors for any of the above operations.
-          alert(
-            `Failed to load web3, accounts, or contract. Check console for details.`,
-          );
-          console.error(error);
-        }
     };
 
     componentWillUnmount() {
