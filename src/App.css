@@ -1,7 +1,18 @@
-/* Styles go here */
-.token {
-	height: 150px;
-	width: 150px;
-	border-radius: 50%;
-	display: inline-block; 
+
+.ui.card .content img, .ui.cards>.card .content img {
+	margin-bottom: 16px;
+	height: 350px;
+	width: auto;
+}
+.button, input, optgroup, select, textarea{
+
+	font-size:16px;
+}
+body{
+	font-family:"MonoSpec-medium";
+}
+
+.fByJds{
+	font-size:16px;
+
 }

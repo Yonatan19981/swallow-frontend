@@ -12,7 +12,7 @@ import { Loader, Button, Input, Heading, Table, Form, Flex, Box, Image } from 'r
 import { zeppelinSolidityHotLoaderOptions } from './webpack';
 
 import styles from './App.module.scss';
-//import './App.css';
+import './App.css';
 
 const address= require('./Addresses');
 
