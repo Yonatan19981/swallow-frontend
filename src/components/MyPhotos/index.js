@@ -15,7 +15,6 @@ import CardHeader from "../Card/CardHeader.js";
 import styles from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
 import { whiteColor } from "../../assets/jss/material-kit-pro-react";
 import Card1Component from "../Card/CardComponent.js";
-import CardExampleCardProps from "../Card/CardSemantic.js";
 import { Card } from 'semantic-ui-react'
 import { StyledCardOption } from "../Card/StylesCard";
 import { Button } from "../Button/RegularButton";
