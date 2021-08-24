@@ -58,7 +58,7 @@ export default class PhotoMarketplace extends Component {
     const photoNFTMarketPlace = this.props.PhotoNFTMarketplace;
     const photoNFTData = this.props.photoNFTData;
     const allPhotos = this.props.allPhotos;
-
+    console.log("photoNFTMarketPlace",photoNFTMarketPlace)
     console.log('=== value of buyPhotoNFT ===', e.target.value);
 
     const PHOTO_NFT = e.target.value;
@@ -121,7 +121,6 @@ export default class PhotoMarketplace extends Component {
 
     return (
       <Grid item justifyContent="center" xs={3}>
-        <StyledCardOption raised>
           <Card.Content>
             <Image size="medium" 
 
@@ -134,18 +133,21 @@ export default class PhotoMarketplace extends Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <div className='ui one buttons'>
-              <Button value={photo.photoNFT} onClick={this.buyPhotoNFT}> Buy </Button>
-            </div>
+            {this.renderBuyButton(photo,key)}
           </Card.Content>
-        </StyledCardOption>
       </Grid>
     );
   }
-
+  renderBuyButton = (photo, key) => {
+    const currentAccount = this.props.accounts[0];
+    if(currentAccount!=photo.ownerAddress)
+    return  <Button value={photo.photoNFT} onClick={this.buyPhotoNFT}> Buy </Button>;
+    return null;
+   
+  }
   renderAllPhotos = (photo, key) => {
     const allPhotos = this.props.allPhotos;
-    if (!allPhotos) return 'Please connect to ropsten network';
+    if (!allPhotos) return <h2>please connect to ropsten network</h2>;
     return (
       <Grid justifyContent="center" container spacing={6}>
         {allPhotos.map((photo, i) => this.renderPhoto(photo, i))}
@@ -158,14 +160,14 @@ export default class PhotoMarketplace extends Component {
     const accounts = this.props.accounts;
     let web3 = null;
     let balance = null;
-    let photoNFTMarketPlace = null;
     let photoNFTData = null;
     // let currentAccount = null;
     let allPhotos = null;
     if (accounts) {
       web3 = this.props.web3;
       balance = this.props.balance;
-      photoNFTMarketPlace = this.props.PhotoNFTMarketplace;
+     let photoNFTMarketPlace = this.props.PhotoNFTMarketplace;
+      console.log("this.props.PhotoNFTMarketplace",this.props.PhotoNFTMarketplace)
       photoNFTData = this.props.PhotoNFTData;
       // currentAccount = this.props.accounts[0];
       allPhotos = this.props.allPhotos;

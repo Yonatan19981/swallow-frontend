@@ -4,15 +4,20 @@
 	height: 350px;
 	width: auto;
 }
-.button, input, optgroup, select, textarea{
 
-	font-size:16px;
+.MuiGrid-spacing-xs-6 > .MuiGrid-item{
+    padding: 24px;
+    border-radius: 10px;
+    border-width: medium;
+    border: 1px solid #FD6363
 }
-body{
-	font-family:"MonoSpec-medium";
-}
-
 .fByJds{
 	font-size:16px;
 
+}
+
+.img{
+	border-radius: 10px;
+    border-width: medium;
+	border: 3px solid #FD6363
 }

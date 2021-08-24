@@ -1,15 +1,15 @@
 const contractAddresses = [
     {
       name:"PhotoNFTData",
-      address:"0x775CDC354CA7a096B80CC4ED531cdF552BCaD945"
+      address:"0x06d786B53aFf44cb05727a040F1962b2d51F1512"
     },
     {
       name:"PhotoNFTMarketPlace",
-      address:"0x38c8C58DD98Ca6a33C413d943EC09F52b4B5D675"
+      address:"0x1F0115eE67d140125fCa372Cf05CEA61aDF2A12d"
     },
     {
      name:"PhotoNFTFactory",
-     address:"0x1Ad9C9e831C8ea047aC10a8fd5505FF787297ff0"
+     address:"0x7b0466C1c3c50D060a82D837da049B591b94578A"
     }
   ];
   

@@ -1,24 +1,20 @@
 import React, { Component } from "react";
 import getWeb3, { Web3 } from "../../utils/getWeb3";
-import classNames from "classnames";
-import { Loader, Input, Table, Form, Field, Image, Box } from 'rimble-ui';
+
+import { Loader, Input, Table, Form, Field } from 'rimble-ui';
 import { zeppelinSolidityHotLoaderOptions } from '../../webpack';
-import { contractAddresses } from '../../Addresses';
 import styled from "styled-components";
-import { Grid } from '@material-ui/core';
-import GridContainer from "../Grid/GridContainer.js";
-import GridItem from "../Grid/GridItem.js";
-import { makeStyles } from "@material-ui/core/styles";
-import cardsStyle from "../../assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js";
 import CardBody from "../Card/CardBody.js";
 import CardHeader from "../Card/CardHeader.js";
-import styles from "../../assets/jss/material-kit-pro-react/views/componentsSections/sectionCards.js";
+import styles from '../../App.module.scss';
 import { whiteColor } from "../../assets/jss/material-kit-pro-react";
-import Card1Component from "../Card/CardComponent.js";
-import { Card } from 'semantic-ui-react'
+import GridContainer from "../Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+import { Card,Image } from 'semantic-ui-react'
 import { StyledCardOption } from "../Card/StylesCard";
 import { Button } from "../Button/RegularButton";
-import 'semantic-ui-css/semantic.min.css'
+import Grid from '@material-ui/core/Grid';
+
 const address = require('../../Addresses');
 const theme = {
   orange: {
@@ -35,7 +31,6 @@ Button.defaultProps = {
 };
 
 console.log(address[0].address)
-const useStyles = makeStyles(styles);
 export default class MyPhotos extends Component {
 
   constructor(props) {
@@ -159,11 +154,10 @@ export default class MyPhotos extends Component {
     if (!web3 || !this.props.accounts) return null;
 
     const currentAccount = this.props.accounts[0];
-    if (!currentAccount || photo.status !== "Open" ||currentAccount!=photo.ownerAddress ) return null;
+    if (!currentAccount||currentAccount!=photo.ownerAddress ) return null;
 
     return (
-      <Grid item justifyContent="center" xs={4}>
-        <StyledCardOption raised>
+      <Grid item justifyContent="center" xs={3}>
           <Card.Content>
             <Image size="medium"
 
@@ -178,14 +172,13 @@ export default class MyPhotos extends Component {
           <Card.Content extra>
             {this.renderButton(photo)}
           </Card.Content>
-        </StyledCardOption>
       </Grid>
     );
   }
 
   renderAllPhotos = (photo, key) => {
     const allPhotos = this.props.allPhotos;
-    if (!allPhotos) return 'Please connect to ropsten network';
+    if (!allPhotos) return <h2>please connect to ropsten network</h2>;
     return (
       <Grid justifyContent="center" container spacing={6}>
         {allPhotos.map((photo, i) => this.renderPhoto(photo, i))}

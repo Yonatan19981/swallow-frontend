@@ -13,7 +13,7 @@ import { zeppelinSolidityHotLoaderOptions } from './webpack';
 
 import styles from './App.module.scss';
 import './App.css';
-
+import './App.module.scss';
 const address= require('./Addresses');
 
 class App extends Component {
@@ -153,8 +153,10 @@ class App extends Component {
 
   render() {
     const { web3, network,accounts,balance,photoNFTMarketPlace,photoNFTData,allPhotos,PHOTO_NFT_MARKETPLACE,photoNFTFactory} = this.state;
+    console.log("photoNFTMarketPlace app",photoNFTMarketPlace)
     console.log("allPhotos in app.js is ",allPhotos);
     console.log("photoNFTData in app.js is ",photoNFTData);
+    console.log("web3",(web3));
     return (
       <div className={styles.App}>
         <Header 
@@ -194,9 +196,10 @@ class App extends Component {
          web3={web3}
          accounts={accounts}
          balance={balance}
-         photoNFTMarketPlace={photoNFTMarketPlace}
+         PhotoNFTMarketplace={photoNFTMarketPlace}
          photoNFTData={photoNFTData}
          allPhotos={allPhotos}
+         
          />
       </div>    }
         <Footer />
