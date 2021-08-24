@@ -17,6 +17,7 @@
 
 }
 
+
 code {
   background: black;
   box-shadow: 0 0px 2px 0px #ccc;
@@ -96,11 +97,14 @@ code {
   }
 }
 
+.image{
+
+}
 h2 {
   margin-top: 30px;
   color: rgb(255, 255, 255);
   font-family:'MonoSpec-medium';
-
+  margin-bottom: 40px;
 }
 /* NFT */
 .colorRadius {
@@ -110,5 +114,6 @@ h2 {
   border-radius: 50%;
   display: inline-block; 
 }
+
 
 
