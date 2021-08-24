@@ -159,7 +159,7 @@ export default class MyPhotos extends Component {
     if (!web3 || !this.props.accounts) return null;
 
     const currentAccount = this.props.accounts[0];
-    if (!currentAccount || photo.status !== "Open") return null;
+    if (!currentAccount || photo.status !== "Open" ||currentAccount!=photo.owner ) return null;
 
     return (
       <Grid item justifyContent="center" xs={4}>
