@@ -21,3 +21,26 @@
     border-width: medium;
 	border: 3px solid #FD6363
 }
+
+.wUQFN{
+	background-color: rgb(253, 99, 99);
+    color: white;
+    font-size: 15px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+	font-family:"MonoSpec-medium";
+}
+
+.bWUhxa{
+
+	background-color: rgb(253, 99, 99);
+    color: white;
+    font-size: 15px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+	font-family:"MonoSpec-medium";
+}
